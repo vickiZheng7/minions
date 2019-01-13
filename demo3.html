@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>SVG Demo</title>
+    </head>
+    <body>
+        <span>上色与描边：</span>
+        <svg width="300" height="300">
+            <defs>
+                <style>
+                    #myRect {
+                        fill: pink;
+                        stroke: black;
+                        stroke-width: 15;
+                        stroke-linejoin: round;
+                    }
+                    #myRect:hover {
+                        fill: plum;
+                        stroke: cornflowerblue;
+                        stroke-linejoin: bevel;
+                        stroke-dasharray: 8,5,12;
+                    }
+                </style>
+            </defs>
+            <rect width="180" height="180" x="80" y="80" id="myRect"/>
+        </svg>
+        <br/>
+        <span>线性渐变：</span>
+        <svg width="600" height="300">
+            <defs>
+                <linearGradient id="linearStyle1">
+                    <stop offset="0%" stop-color="black"></stop>
+                    <stop offset="100%" stop-color="pink"></stop>
+                </linearGradient>
+                <linearGradient id="linearStyle2"
+                                x1="0" y1="0" x2="1" y2="1"
+                                xlink:href="#linearStyle1"/>
+                <style>
+                    #myRect1 {
+                        fill: url(#linearStyle1);
+                    }
+                    #myRect2 {
+                        fill: url(#linearStyle2);
+                    }
+                </style>
+            </defs>
+            <rect width="180" height="180" x="80" y="80" id="myRect1"/>
+            <rect width="180" height="180" x="380" y="80" id="myRect2"/>
+        </svg>
+        <br/>
+        <span>径向渐变：</span>
+        <svg width="900" height="300">
+            <defs>
+                <radialGradient id="radialStyle1">
+                    <stop offset="0%" stop-color="pink"></stop>
+                    <stop offset="100%" stop-color="black"></stop>
+                </radialGradient>
+                <radialGradient id="radialStyle2"
+                                cx="0.25" cy="0.25" r="0.8"
+                                xlink:href="#radialStyle1"/>
+                <radialGradient id="radialStyle3"
+                                fx="0.25" fy="0.25"
+                                xlink:href="#radialStyle1"/>
+                <style>
+                    #myRect3 {
+                        fill: url(#radialStyle1);
+                    }
+                    #myRect4 {
+                        fill: url(#radialStyle2);
+                    }
+                    #myRect5 {
+                        fill: url(#radialStyle3);
+                    }
+                </style>
+            </defs>
+            <rect width="180" height="180" x="80" y="80" id="myRect3"/>
+            <rect width="180" height="180" x="380" y="80" id="myRect4"/>
+            <rect width="180" height="180" x="680" y="80" id="myRect5"/>
+        </svg>
+    </body>
+</html>
