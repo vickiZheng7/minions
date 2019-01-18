@@ -78,5 +78,35 @@
             <rect width="180" height="180" x="380" y="80" id="myRect4"/>
             <rect width="180" height="180" x="680" y="80" id="myRect5"/>
         </svg>
+        <h4>线性渐变、放射渐变</h4>
+    	<svg width="0" height="0">
+			<defs>
+			  <!--线性渐变-->
+			  <linearGradient id="linear">
+			  	<stop offset="0%" stop-color="pink"></stop>
+			  	<stop offset="100%" stop-color="black"></stop>
+			  </linearGradient>
+			  <linearGradient id="linear1" x1="0" y1="0" x2="1" y2="1">
+			  	<stop offset="0%" stop-color="pink"></stop>
+			  	<stop offset="100%" stop-color="black"></stop>
+			  </linearGradient>
+			  <!--放射渐变-->
+			  <radialGradient id="radial">
+			  	<stop offset="0%" stop-color="pink"></stop>
+			  	<stop offset="100%" stop-color="black"></stop>
+			  </radialGradient>
+			</defs>
+    	</svg>
+        <svg width="400" height="200">
+			<rect x="10" y="10" width="180" height="180" fill="url(#linear)"/>
+			<rect x="210" y="10" width="180" height="180" fill="url(#radial)"/>
+		</svg>
+		<h4>改变线性渐变的方向</h4>
+		<svg width="400" height="200">
+			<defs>
+			</defs>
+			<rect x="10" y="10" width="180" height="180" fill="url(#linear)"/>
+			<rect x="210" y="10" width="180" height="180" fill="url(#linear1)"/>
+		</svg>
     </body>
 </html>
