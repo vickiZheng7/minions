@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>SVG demo</title>
+    </head>
+    <body>
+        <svg width="400" height="400">
+            <defs>
+                <linearGradient id="linear">
+                    <stop offset="0%" stop-color="black"/>
+                    <stop offset="100%" stop-color="pink"/>
+                </linearGradient>
+            </defs>
+            <g fill="url(#linear)" stroke="black" stroke-width="2">
+                <rect x="10" y="10" width="50" height="50" stroke-dasharray="5"/>
+                <text x="70" y="80" fill="black" stroke-width="0">[平移(60, 80)]</text>
+                <rect x="10" y="10" width="50" height="50" transform="translate(60, 80)"/>
+                <text x="160" y="20" fill="black" stroke-width="0">[平移(200, 20)旋转45度]</text>
+                <rect x="10" y="10" width="50" height="50" transform="translate(200, 20),rotate(45)"/>
+                <text x="80" y="30" fill="black" stroke-width="0">[缩放50%]</text>
+                <rect x="10" y="10" width="50" height="50" transform="translate(80, 30), scale(0.5)"/>
+
+            </g>
+        </svg>
+    </body>
+</html>

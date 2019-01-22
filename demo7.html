@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>SVG demo</title>
+</head>
+<body>
+<svg width="400" height="400">
+    <defs>
+        <linearGradient id="linear">
+            <stop offset="0%" stop-color="black"/>
+            <stop offset="100%" stop-color="pink"/>
+        </linearGradient>
+        <clipPath id="clipPath">
+            <rect x="0" y="0" width="200" height="100"/>
+        </clipPath>
+    </defs>
+    <circle cx="100" cy="100" r="100" fill="url(#linear)" clip-path="url(#clipPath)"></circle>
+</svg>
+</body>
+</html>

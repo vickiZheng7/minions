@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>SVG demo</title>
+    </head>
+    <body>
+        <svg width="400" height="400">
+            <defs>
+                <linearGradient id="pink">
+                    <stop offset="0%" stop-color="white"></stop>
+                    <stop offset="100%" stop-color="pink"></stop>
+                </linearGradient>
+                <linearGradient id="yellow">
+                    <stop offset="0%" stop-color="white"></stop>
+                    <stop offset="100%" stop-color="yellow"></stop>
+                </linearGradient>
+                <linearGradient id="blue">
+                    <stop offset="0%" stop-color="white"></stop>
+                    <stop offset="100%" stop-color="blue"></stop>
+                </linearGradient>
+                <linearGradient id="green">
+                    <stop offset="0%" stop-color="white"></stop>
+                    <stop offset="100%" stop-color="green"></stop>
+                </linearGradient>
+
+                <pattern id="pattern" x="0" y="0" width="0.5" height="0.5" patternContentUnits="objectBoundingBox">
+                    <rect x="0" y="0" width="0.5" height="0.5" fill="black" stroke="white" stroke-width="0.005"/>
+                    <circle cx="0.05" cy="0.05" r="0.04" fill="url(#pink)"/>
+                    <circle cx="0.25" cy="0.25" r="0.075" fill="url(#blue)"/>
+                    <circle cx="0.075" cy="0.4" r="0.06" fill="url(#green)"/>
+                    <circle cx="0.4" cy="0.125" r="0.04" fill="url(#yellow)"/>
+                </pattern>
+            </defs>
+            <rect x="0" y="0" width="250" height="250" stroke="black" fill="url(#pattern)"/>
+        </svg>
+    </body>
+</html>

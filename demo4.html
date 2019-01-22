@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>SVG Demo</title>
+</head>
+<body>
+<h4>线性渐变、放射渐变</h4>
+<svg width="0" height="0">
+    <defs>
+        <!--线性渐变-->
+        <linearGradient id="linear">
+            <stop offset="0%" stop-color="pink"></stop>
+            <stop offset="100%" stop-color="black"></stop>
+        </linearGradient>
+        <linearGradient id="linear1" xlink:href="#linear" x1="0" y1="0" x2="1" y2="1"/>
+        <!--放射渐变-->
+        <radialGradient id="radial">
+            <stop offset="0%" stop-color="pink"></stop>
+            <stop offset="100%" stop-color="black"></stop>
+        </radialGradient>
+        <radialGradient id="radial1" xlink:href="#radial" fx="0.2" fy="0.2"/>
+        <radialGradient id="radial2" xlink:href="#radial" cx="0.2" cy="0.2"/>
+        <radialGradient id="radial3" xlink:href="#radial" spreadMethod="pad" fx="0.25" fy="0.25" r="0.4"/>
+        <radialGradient id="radial4" xlink:href="#radial" spreadMethod="reflect" fx="0.25" fy="0.25" r="0.4"/>
+        <radialGradient id="radial5" xlink:href="#radial" spreadMethod="repeat" fx="0.25" fy="0.25" r="0.4"/>
+    </defs>
+</svg>
+<svg width="400" height="200">
+    <rect x="10" y="10" width="180" height="180" fill="url(#linear)"/>
+    <rect x="210" y="10" width="180" height="180" fill="url(#radial)"/>
+</svg>
+<h4>改变线性渐变的方向</h4>
+<svg width="400" height="200">
+    <rect x="10" y="10" width="180" height="180" fill="url(#linear)"/>
+    <rect x="210" y="10" width="180" height="180" fill="url(#linear1)"/>
+</svg>
+<h4>如何区分放射渐变的中心和焦点？</h4>
+<svg width="600" height="200">
+    <rect x="10" y="10" width="180" height="180" fill="url(#radial)"/>
+    <rect x="210" y="10" width="180" height="180" fill="url(#radial1)"/>
+    <rect x="410" y="10" width="180" height="180" fill="url(#radial2)"/>
+</svg>
+<h4>spreadMethod</h4>
+<svg width="600" height="200">
+    <rect x="10" y="10" width="180" height="180" fill="url(#radial3)"/>
+    <rect x="210" y="10" width="180" height="180" fill="url(#radial4)"/>
+    <rect x="410" y="10" width="180" height="180" fill="url(#radial5)"/>
+</svg>
+</body>
+</html>
